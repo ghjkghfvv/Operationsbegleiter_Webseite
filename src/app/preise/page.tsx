@@ -9,16 +9,13 @@ import { Button } from '@/components/ui/Button';
 import { Accordion } from '@/components/ui/Accordion';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
 import { StaggerChildren, StaggerItem } from '@/components/animations/StaggerChildren';
-import { PRICING_PLANS_PATIENT, PRICING_PLANS_ARZT, FAQ_ITEMS } from '@/lib/constants';
+import { PRICING_PLANS_PATIENT, FAQ_ITEMS } from '@/lib/constants';
 import { formatPrice } from '@/lib/utils';
-
-type Audience = 'patient' | 'arzt';
 
 export default function PreisePage() {
   const [yearly, setYearly] = useState(true);
-  const [audience, setAudience] = useState<Audience>('patient');
 
-  const plans = audience === 'patient' ? PRICING_PLANS_PATIENT : PRICING_PLANS_ARZT;
+  const plans = PRICING_PLANS_PATIENT;
 
   return (
     <div className="pt-24 pb-20">
@@ -31,27 +28,8 @@ export default function PreisePage() {
           </h1>
           <p className="text-lg text-[var(--foreground)]/60 max-w-2xl mx-auto mb-8">
             Starten Sie kostenlos und upgraden Sie, wenn Sie bereit sind. Keine versteckten Kosten.
+            <span className="block mt-2 text-primary font-medium">Für Ärzte &amp; Organisationen ist der Operationsbegleiter komplett kostenlos.</span>
           </p>
-
-          {/* Audience Toggle */}
-          <div className="inline-flex items-center gap-3 p-1 rounded-2xl bg-[var(--surface)] border border-[var(--border)] mb-6">
-            <button
-              onClick={() => setAudience('patient')}
-              className={`px-5 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer ${
-                audience === 'patient' ? 'bg-primary text-white shadow-md' : 'text-[var(--foreground)]/60'
-              }`}
-            >
-              Patienten
-            </button>
-            <button
-              onClick={() => setAudience('arzt')}
-              className={`px-5 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer ${
-                audience === 'arzt' ? 'bg-primary text-white shadow-md' : 'text-[var(--foreground)]/60'
-              }`}
-            >
-              Ärzte & Organisationen
-            </button>
-          </div>
 
           {/* Billing Toggle */}
           <div className="flex justify-center">
@@ -82,9 +60,9 @@ export default function PreisePage() {
 
       {/* Pricing Cards */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <StaggerChildren key={audience} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {plans.map((plan) => (
-            <StaggerItem key={plan.name + audience}>
+            <StaggerItem key={plan.name}>
               <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.2 }}>
                 <Card
                   variant={plan.highlighted ? 'elevated' : 'default'}

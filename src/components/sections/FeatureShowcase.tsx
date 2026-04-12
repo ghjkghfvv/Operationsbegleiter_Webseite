@@ -87,7 +87,7 @@ const familieFeatures: Feature[] = [
 const tabs: { key: Tab; label: string; sub?: string; count: number; pricing?: string }[] = [
   { key: 'patient-free', label: 'Patienten',   sub: 'Kostenlos', count: 16 },
   { key: 'patient-pro',  label: 'Patienten',   sub: 'Pro',       count: 13, pricing: 'ab 8,99 €/Monat' },
-  { key: 'arzt-free',    label: 'Ärzte',       sub: 'Kostenlos', count: 11 },
+  { key: 'arzt-free',    label: 'Ärzte & Orgs', sub: 'Alles gratis', count: 11 },
   { key: 'familie',      label: 'Familie',     count: 5 },
 ];
 
