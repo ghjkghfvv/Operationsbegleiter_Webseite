@@ -23,7 +23,7 @@ export function StatsSection() {
           </TextReveal>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -35,10 +35,10 @@ export function StatsSection() {
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-                className="text-center p-8 rounded-2xl bg-white border border-[var(--border)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-shadow duration-500 group"
+                className="text-center p-5 sm:p-8 rounded-2xl bg-white border border-[var(--border)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-shadow duration-500 group"
               >
                 <motion.div
-                  className="text-3xl mb-4 inline-block"
+                  className="text-2xl sm:text-3xl mb-3 sm:mb-4 inline-block"
                   whileHover={{ scale: 1.15, rotate: [0, -8, 8, 0] }}
                   transition={{ duration: 0.4 }}
                 >
@@ -48,7 +48,7 @@ export function StatsSection() {
                   value={stat.value}
                   suffix={stat.suffix}
                   decimals={stat.decimals || 0}
-                  className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] font-mono block"
+                  className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[var(--foreground)] font-mono block"
                 />
                 <p className="text-[var(--foreground)]/45 mt-3 text-sm font-medium">{stat.label}</p>
               </motion.div>

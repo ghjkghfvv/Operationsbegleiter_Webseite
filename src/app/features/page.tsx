@@ -81,12 +81,12 @@ export default function FeaturesPage() {
       {/* Filter Tabs */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="flex justify-center">
-          <div className="inline-flex p-1 rounded-2xl bg-[var(--surface)] border border-[var(--border)]">
+          <div className="inline-flex flex-wrap justify-center p-1 rounded-2xl bg-[var(--surface)] border border-[var(--border)]">
             {tabs.map(tab => (
               <button
                 key={tab.value}
                 onClick={() => setActiveTab(tab.value)}
-                className={`px-6 py-2.5 rounded-xl text-sm font-medium transition-all ${
+                className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all ${
                   activeTab === tab.value
                     ? 'bg-primary text-white shadow-md'
                     : 'text-[var(--foreground)]/60 hover:text-[var(--foreground)]'
@@ -172,10 +172,10 @@ export default function FeaturesPage() {
 
         <ScrollReveal>
           <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
-            <div className="grid grid-cols-3 gap-4 p-4 bg-[var(--surface-secondary)]/30 font-semibold text-sm">
+            <div className="grid grid-cols-[1fr_auto_auto] gap-2 sm:gap-4 p-3 sm:p-4 bg-[var(--surface-secondary)]/30 font-semibold text-xs sm:text-sm">
               <div>Feature</div>
-              <div className="text-center">Kostenlos</div>
-              <div className="text-center">Pro</div>
+              <div className="text-center w-16 sm:w-auto">Kostenlos</div>
+              <div className="text-center w-12 sm:w-auto">Pro</div>
             </div>
             {[
               ['Timeline / Feed', true, true],
@@ -205,21 +205,21 @@ export default function FeaturesPage() {
             ].map(([feature, free, pro], i) => (
               <div
                 key={i}
-                className="grid grid-cols-3 gap-4 p-4 border-t border-[var(--border)] text-sm items-center"
+                className="grid grid-cols-[1fr_auto_auto] gap-2 sm:gap-4 p-3 sm:p-4 border-t border-[var(--border)] text-xs sm:text-sm items-center"
               >
-                <div className="text-[var(--foreground)]/80">{feature as string}</div>
-                <div className="text-center">
+                <div className="text-[var(--foreground)]/80 min-w-0">{feature as string}</div>
+                <div className="text-center w-16 sm:w-auto">
                   {free ? (
-                    <Check className="w-5 h-5 text-success mx-auto" />
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mx-auto" />
                   ) : (
-                    <X className="w-5 h-5 text-[var(--foreground)]/20 mx-auto" />
+                    <X className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--foreground)]/20 mx-auto" />
                   )}
                 </div>
-                <div className="text-center">
+                <div className="text-center w-12 sm:w-auto">
                   {pro ? (
-                    <Check className="w-5 h-5 text-success mx-auto" />
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-success mx-auto" />
                   ) : (
-                    <X className="w-5 h-5 text-[var(--foreground)]/20 mx-auto" />
+                    <X className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--foreground)]/20 mx-auto" />
                   )}
                 </div>
               </div>

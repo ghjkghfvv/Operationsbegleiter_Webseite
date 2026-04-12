@@ -84,7 +84,7 @@ export function TestimonialsSection() {
               exit="exit"
               transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              <div className="text-center p-10 sm:p-14 rounded-3xl bg-white border border-[var(--border)] shadow-sm relative">
+              <div className="text-center p-6 sm:p-10 lg:p-14 rounded-3xl bg-white border border-[var(--border)] shadow-sm relative">
                 {/* Quote icon */}
                 <div className="absolute top-8 left-10 opacity-[0.06]">
                   <Quote className="w-16 h-16 text-primary" />

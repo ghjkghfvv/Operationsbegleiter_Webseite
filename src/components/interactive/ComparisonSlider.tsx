@@ -48,11 +48,11 @@ export function ComparisonSlider() {
       }}
     >
       {/* Without App (Left) */}
-      <div className="w-full aspect-[16/9] bg-gradient-to-br from-gray-100 to-gray-200 relative">
-        <div className="absolute inset-0 flex flex-col items-center justify-center p-8 sm:p-12">
-          <div className="text-5xl mb-5 grayscale opacity-60">😰</div>
-          <h3 className="text-lg sm:text-xl font-bold text-gray-400 mb-4">Ohne Operationsbegleiter</h3>
-          <ul className="text-sm text-gray-400 space-y-2.5 text-center">
+      <div className="w-full aspect-[4/5] sm:aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200 relative">
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-5 sm:p-12">
+          <div className="text-4xl sm:text-5xl mb-3 sm:mb-5 grayscale opacity-60">😰</div>
+          <h3 className="text-base sm:text-xl font-bold text-gray-400 mb-3 sm:mb-4">Ohne Operationsbegleiter</h3>
+          <ul className="text-xs sm:text-sm text-gray-400 space-y-1.5 sm:space-y-2.5 text-center">
             <li className="flex items-center justify-center gap-2"><span className="opacity-50">✗</span> Zettelwirtschaft & verstreute Notizen</li>
             <li className="flex items-center justify-center gap-2"><span className="opacity-50">✗</span> Unsicherheit bei Symptomen</li>
             <li className="flex items-center justify-center gap-2"><span className="opacity-50">✗</span> Vergessene Medikamente</li>
@@ -67,10 +67,10 @@ export function ComparisonSlider() {
         className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50"
         style={{ clipPath: `inset(0 0 0 ${position}%)` }}
       >
-        <div className="absolute inset-0 flex flex-col items-center justify-center p-8 sm:p-12">
-          <div className="text-5xl mb-5">😊</div>
-          <h3 className="text-lg sm:text-xl font-bold text-primary mb-4">Mit Operationsbegleiter</h3>
-          <ul className="text-sm text-[var(--foreground)]/65 space-y-2.5 text-center">
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-5 sm:p-12">
+          <div className="text-4xl sm:text-5xl mb-3 sm:mb-5">😊</div>
+          <h3 className="text-base sm:text-xl font-bold text-primary mb-3 sm:mb-4">Mit Operationsbegleiter</h3>
+          <ul className="text-xs sm:text-sm text-[var(--foreground)]/65 space-y-1.5 sm:space-y-2.5 text-center">
             <li className="flex items-center justify-center gap-2"><span className="text-success">✓</span> Alles digital & organisiert</li>
             <li className="flex items-center justify-center gap-2"><span className="text-success">✓</span> KI-Assistentin Bella hilft 24/7</li>
             <li className="flex items-center justify-center gap-2"><span className="text-success">✓</span> Automatische Medikamenten-Erinnerungen</li>

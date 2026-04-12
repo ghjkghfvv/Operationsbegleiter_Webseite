@@ -181,7 +181,7 @@ export function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 2.6 }}
-              className="flex gap-6 sm:gap-10 justify-center lg:justify-start"
+              className="flex flex-wrap gap-6 sm:gap-10 justify-center lg:justify-start"
             >
               {[
                 { value: 10000, suffix: '+', label: 'begleitete OPs' },
