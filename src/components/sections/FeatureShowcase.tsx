@@ -140,12 +140,12 @@ export function FeatureShowcase() {
           transition={{ delay: 0.2 }}
           className="flex justify-center mb-12"
         >
-          <div className="inline-flex bg-white border border-[var(--border)] rounded-2xl p-1.5 gap-1 shadow-sm flex-wrap justify-center">
+          <div className="inline-flex bg-white border border-[var(--border)] rounded-2xl p-1 sm:p-1.5 gap-0.5 sm:gap-1 shadow-sm flex-wrap justify-center">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`relative flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-medium transition-colors duration-200 cursor-pointer whitespace-nowrap ${
+                className={`relative flex items-center gap-1 sm:gap-1.5 px-2.5 py-2 sm:px-4 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-colors duration-200 cursor-pointer whitespace-nowrap ${
                   activeTab === tab.key
                     ? 'text-white'
                     : 'text-[var(--foreground)]/50 hover:text-[var(--foreground)]'
@@ -203,7 +203,7 @@ export function FeatureShowcase() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.28, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4"
           >
             {current.map((feature, i) => {
               const Icon = feature.icon;

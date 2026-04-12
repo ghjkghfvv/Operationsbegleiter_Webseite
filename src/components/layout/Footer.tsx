@@ -31,7 +31,7 @@ export function Footer() {
           {subscribed ? (
             <p className="text-success font-medium">✓ Vielen Dank für Ihre Anmeldung!</p>
           ) : (
-            <form onSubmit={handleNewsletterSubmit} className="flex gap-3">
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
                 value={email}
