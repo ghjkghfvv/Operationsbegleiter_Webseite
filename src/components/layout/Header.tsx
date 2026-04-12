@@ -103,7 +103,7 @@ export function Header() {
                 <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.23.99.17l12.6-7.17-2.97-2.97-10.62 9.97zM.66 1.15C.25 1.57 0 2.22 0 3.04v17.93c0 .82.25 1.47.67 1.89l.1.09 10.03-10.03v-.23L.76 1.06l-.1.09zM20.96 10.5l-2.81-1.6-3.18 3.18 3.18 3.18 2.84-1.62c.81-.46.81-1.21-.03-1.14zM3.18.24L15.8 7.41l-2.97 2.97L3.18.24z"/></svg>
                 Google Play
               </a>
-              <Button size="sm" href="#">
+              <Button size="sm" href="https://operationsbegleiter-860e7.web.app">
                 Web App
               </Button>
             </div>
