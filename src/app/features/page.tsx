@@ -135,11 +135,6 @@ export default function FeaturesPage() {
             {FEATURES_DOCTOR.map((feature) => (
               <StaggerItem key={feature.title}>
                 <Card variant="glass" className="h-full relative">
-                  {'pro' in feature && feature.pro && (
-                    <span className="absolute top-4 right-4 text-[10px] px-2 py-0.5 rounded-full bg-gradient-to-r from-primary to-accent text-white font-bold">
-                      PRO
-                    </span>
-                  )}
                   <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-4">
                     {iconComponents[feature.icon]}
                   </div>
