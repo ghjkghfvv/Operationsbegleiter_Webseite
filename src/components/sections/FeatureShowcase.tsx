@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { TextReveal } from '@/components/effects/TextReveal';
 
-type Tab = 'patient-free' | 'patient-pro' | 'arzt-free' | 'arzt-pro' | 'familie';
+type Tab = 'patient-free' | 'patient-pro' | 'arzt-free' | 'familie';
 
 interface Feature {
   icon: LucideIcon;
@@ -60,18 +60,14 @@ const patientProFeatures: Feature[] = [
   { icon: BarChart2,     title: 'Analytics Dashboard',       desc: 'Detaillierte Auswertungen und Analysen',                          color: 'bg-violet-600' },
 ];
 
-// ── ÄRZTE KOSTENLOS ──
-const arztFreeFeatures: Feature[] = [
+// ── ÄRZTE (alle Funktionen kostenlos) ──
+const arztFeatures: Feature[] = [
   { icon: Users,         title: 'Patientenliste',            desc: 'Alle verknüpften Patienten mit Phasen-Übersicht',                 color: 'bg-blue-500' },
   { icon: Eye,           title: 'Patientendetails',          desc: 'Schmerz, Wunden, Termine, Dokumente je Patient einsehen',          color: 'bg-[#007AFF]' },
   { icon: CalendarDays,  title: 'Kalender',                  desc: 'Termine erstellen, bearbeiten und löschen',                        color: 'bg-sky-500' },
   { icon: UserPlus,      title: 'Patienten einladen',        desc: 'Einladungscode und QR-Code generieren',                            color: 'bg-teal-500' },
   { icon: User,          title: 'Profil verwalten',          desc: 'Name, Fachrichtung und Praxisdaten pflegen',                       color: 'bg-indigo-500' },
-];
-
-// ── ÄRZTE PRO ──
-const arztProFeatures: Feature[] = [
-  { icon: Users,         title: 'Unbegrenzte Patienten',      desc: 'Mit Pro unbegrenzte Patientenanzahl verwalten',                   color: 'bg-orange-500' },
+  { icon: Users,         title: 'Unbegrenzte Patienten',     desc: 'Unbegrenzte Patientenanzahl verwalten',                             color: 'bg-orange-500' },
   { icon: ClipboardList, title: 'Care-Plan-Vorlagen',        desc: 'Templates mit Tasks erstellen und auf Patienten anwenden',         color: 'bg-violet-500' },
   { icon: BarChart2,     title: 'Arztbericht',               desc: 'Genese-Bericht exportieren und teilen',                            color: 'bg-emerald-500' },
   { icon: Settings,      title: 'Personal-Management',       desc: 'Mitarbeiter-Accounts mit granularer Rechteverwaltung',            color: 'bg-slate-500' },
@@ -91,16 +87,14 @@ const familieFeatures: Feature[] = [
 const tabs: { key: Tab; label: string; sub?: string; count: number; pricing?: string }[] = [
   { key: 'patient-free', label: 'Patienten',   sub: 'Kostenlos', count: 16 },
   { key: 'patient-pro',  label: 'Patienten',   sub: 'Pro',       count: 13, pricing: 'ab 8,99 €/Monat' },
-  { key: 'arzt-free',    label: 'Ärzte',       sub: 'Kostenlos', count: 5 },
-  { key: 'arzt-pro',     label: 'Ärzte',       sub: 'Pro',       count: 6,  pricing: 'ab 19,99 €/Monat' },
+  { key: 'arzt-free',    label: 'Ärzte',       sub: 'Kostenlos', count: 11 },
   { key: 'familie',      label: 'Familie',     count: 5 },
 ];
 
 const featureMap: Record<Tab, Feature[]> = {
   'patient-free': patientFreeFeatures,
   'patient-pro':  patientProFeatures,
-  'arzt-free':    arztFreeFeatures,
-  'arzt-pro':     arztProFeatures,
+  'arzt-free':    arztFeatures,
   'familie':      familieFeatures,
 };
 
@@ -196,7 +190,6 @@ export function FeatureShowcase() {
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                 {tabs.find(t => t.key === activeTab)?.pricing}
                 {activeTab === 'patient-pro' && ' · 75,00 €/Jahr'}
-                {activeTab === 'arzt-pro' && ' · 149,99 €/Jahr'}
               </span>
             </motion.div>
           )}

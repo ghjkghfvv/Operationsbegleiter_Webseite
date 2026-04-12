@@ -174,7 +174,6 @@ export const FEATURES_DOCTOR = [
     icon: 'ClipboardList',
     title: 'Care-Plan-Vorlagen',
     description: 'Templates mit Tasks erstellen und auf Patienten anwenden.',
-    pro: true,
   },
   {
     icon: 'QrCode',
@@ -185,25 +184,21 @@ export const FEATURES_DOCTOR = [
     icon: 'BarChart2',
     title: 'Arztbericht',
     description: 'Genese-Bericht erstellen, exportieren und teilen.',
-    pro: true,
   },
   {
     icon: 'Settings',
     title: 'Personal-Management',
     description: 'Mitarbeiter-Accounts mit granularer Rechteverwaltung.',
-    pro: true,
   },
   {
     icon: 'Building2',
     title: 'Organisation',
     description: 'Mehrere Ärzte unter einem Dach verwalten.',
-    pro: true,
   },
   {
     icon: 'LayoutGrid',
     title: 'Dashboard',
     description: 'Tagesübersicht mit Warnungen, Terminen und Schnellaktionen.',
-    pro: true,
   },
 ] as const;
 
@@ -274,43 +269,24 @@ export const PRICING_PLANS_ARZT = [
   {
     name: 'Kostenlos',
     price: { monthly: 0, yearly: 0 },
-    description: 'Für den Einstieg',
+    description: 'Alle Funktionen — dauerhaft gratis',
     features: [
-      'Patientenliste mit Phasen-Übersicht (max. 100 Patienten)',
+      'Unbegrenzte Patienten',
+      'Unbegrenzte Angestellte',
+      'Patientenliste mit Phasen-Übersicht',
       'Patientendetails ansehen (Schmerz, Wunden, Termine, Dokumente)',
       'Kalender (Termine erstellen, bearbeiten, löschen)',
       'Patienten einladen (Code + QR)',
-      'max. 3 Angestellte',
-      'Profil verwalten',
-    ],
-    notIncluded: [
-      'Care-Plan-Vorlagen',
-      'Arztbericht exportieren',
-      'Personal-Management (unbegrenzte Angestellte)',
-      'Organisation (unbegrenzte Patienten)',
-      'Dashboard mit Warnungen',
-    ],
-    cta: 'Kostenlos starten',
-    highlighted: false,
-  },
-  {
-    name: 'Pro',
-    price: { monthly: 19.99, yearly: 12.50 },
-    description: 'Volle Praxis-Power',
-    features: [
-      'Alles aus Kostenlos',
-      'Unbegrenzte Patienten',
-      'Unbegrenzte Angestellte',
       'Care-Plan-Vorlagen erstellen & anwenden',
       'Arztbericht exportieren / teilen',
       'Personal-Management mit Rechteverwaltung',
       'Organisation (mehrere Ärzte unter einem Dach)',
       'Dashboard mit Warnungs- und Termin-Übersicht',
+      'Profil verwalten',
     ],
     notIncluded: [],
-    cta: 'Pro starten',
+    cta: 'Kostenlos starten',
     highlighted: true,
-    yearlyNote: '149,99 €/Jahr',
   },
 ] as const;
 
@@ -335,7 +311,7 @@ export const BELLA_DEMO_MESSAGES = [
 export const FAQ_ITEMS = [
   {
     question: 'Ist der Operationsbegleiter kostenlos?',
-    answer: 'Ja, die Basis-Version für Patienten ist dauerhaft kostenlos und umfasst Timeline, Schmerztagebuch, Wunddokumentation, Vitalzeichen, Medikamente, Ernährung, Termine, OP-Informationen und mehr. Für erweiterte Features wie den KI-Assistenten Bella, Reha-Übungen, Red Flags und Familien-Zugang gibt es Pro ab 8,99 €/Monat oder 75,00 €/Jahr. Für Ärzte gibt es Pro ab 19,99 €/Monat oder 149,99 €/Jahr.',
+    answer: 'Ja, die Basis-Version für Patienten ist dauerhaft kostenlos und umfasst Timeline, Schmerztagebuch, Wunddokumentation, Vitalzeichen, Medikamente, Ernährung, Termine, OP-Informationen und mehr. Für erweiterte Features wie den KI-Assistenten Bella, Reha-Übungen, Red Flags und Familien-Zugang gibt es Pro ab 8,99 €/Monat oder 75,00 €/Jahr. Für Ärzte und Organisationen ist der Operationsbegleiter komplett kostenlos — alle Funktionen inklusive.',
   },
   {
     question: 'Wie sicher sind meine Daten?',
@@ -363,11 +339,11 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Kann ich das Pro-Abo kündigen?',
-    answer: 'Ja, jederzeit über den App Store oder Google Play Store. Es gibt keine Mindestlaufzeit. Patienten-Pro: 8,99 €/Monat oder 75,00 €/Jahr. Ärzte-Pro: 19,99 €/Monat oder 149,99 €/Jahr.',
+    answer: 'Ja, jederzeit über den App Store oder Google Play Store. Es gibt keine Mindestlaufzeit. Patienten-Pro: 8,99 €/Monat oder 75,00 €/Jahr. Für Ärzte und Organisationen sind alle Funktionen kostenlos.',
   },
   {
     question: 'Gibt es auch einen Plan für Ärzte?',
-    answer: 'Ja! Ärzte können den Operationsbegleiter kostenlos nutzen — mit Patientenliste (max. 100 Patienten), Detailansicht, Kalender, Einladungsfunktion und bis zu 3 Angestellten. Mit Ärzte-Pro (ab 19,99 €/Monat oder 149,99 €/Jahr) erhalten Sie unbegrenzte Patienten, unbegrenzte Angestellte, Care-Plan-Vorlagen, Arztbericht-Export, Personal-Management, Organisation und ein Dashboard.',
+    answer: 'Ja! Ärzte und Organisationen können den Operationsbegleiter komplett kostenlos nutzen — mit allen Funktionen: unbegrenzte Patienten, unbegrenzte Angestellte, Care-Plan-Vorlagen, Arztbericht-Export, Personal-Management, Organisation und Dashboard. Es gibt keine Einschränkungen.',
   },
 ] as const;
 

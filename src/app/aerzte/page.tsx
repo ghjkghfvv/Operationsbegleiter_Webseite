@@ -36,8 +36,7 @@ type Audience = 'praxis' | 'klinik';
 export default function AerztePage() {
   const [audience, setAudience] = useState<Audience>('praxis');
 
-  const freeFeatures = FEATURES_DOCTOR.filter(f => !('pro' in f && f.pro));
-  const proFeatures = FEATURES_DOCTOR.filter(f => 'pro' in f && f.pro);
+  const allFeatures = FEATURES_DOCTOR;
 
   const caseStudies = [
     {
@@ -231,15 +230,15 @@ export default function AerztePage() {
       <section id="features-free" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-12">
-            <Badge variant="primary" className="mb-4">Kostenlos</Badge>
-            <h2 className="text-3xl font-bold mb-4">Alles was Sie brauchen — gratis</h2>
+            <Badge variant="primary" className="mb-4">Komplett kostenlos</Badge>
+            <h2 className="text-3xl font-bold mb-4">Alle Funktionen — dauerhaft gratis</h2>
             <p className="text-[var(--foreground)]/60 max-w-xl mx-auto">
-              Starten Sie kostenlos mit leistungsstarken Features für Ihre Praxis.
+              Der volle Funktionsumfang für Ärzte, Praxen und Kliniken. Ohne versteckte Kosten, ohne Pro-Abo.
             </p>
           </ScrollReveal>
 
           <StaggerChildren className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
-            {freeFeatures.map(feature => (
+            {allFeatures.map(feature => (
               <StaggerItem key={feature.title}>
                 <Card variant="glass" className="h-full">
                   <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-3">
@@ -254,38 +253,7 @@ export default function AerztePage() {
         </div>
       </section>
 
-      {/* Pro Features */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-transparent to-accent/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal className="text-center mb-12">
-            <Badge className="mb-4 bg-gradient-to-r from-primary to-accent text-white border-0">PRO</Badge>
-            <h2 className="text-3xl font-bold mb-4">Mehr Kontrolle mit Pro</h2>
-            <p className="text-[var(--foreground)]/60 max-w-xl mx-auto">
-              Erweiterte Features für Praxen und Kliniken, die mehr wollen.
-              <span className="block mt-1 text-primary font-medium">Ab 19,99 €/Monat · 149,99 €/Jahr</span>
-            </p>
-          </ScrollReveal>
 
-          <StaggerChildren className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {proFeatures.map(feature => (
-              <StaggerItem key={feature.title}>
-                <Card variant="glass" className="h-full relative border-primary/20">
-                  <div className="absolute top-4 right-4">
-                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-gradient-to-r from-primary to-accent text-white font-bold">
-                      PRO
-                    </span>
-                  </div>
-                  <div className="w-11 h-11 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-3">
-                    {iconComponents[feature.icon]}
-                  </div>
-                  <h3 className="font-semibold mb-1">{feature.title}</h3>
-                  <p className="text-sm text-[var(--foreground)]/60">{feature.description}</p>
-                </Card>
-              </StaggerItem>
-            ))}
-          </StaggerChildren>
-        </div>
-      </section>
 
       {/* For Kliniken — Enterprise */}
       <section className="py-20">
