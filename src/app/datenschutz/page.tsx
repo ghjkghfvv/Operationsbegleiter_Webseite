@@ -99,11 +99,39 @@ export default function DatenschutzPage() {
           </section>
 
           <section id="cookies">
-            <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">5. Cookies</h2>
+            <h2 className="text-2xl font-bold text-[var(--foreground)] mb-4">5. Cookies & Einwilligung</h2>
             <p>
-              Unsere Website verwendet ausschließlich technisch notwendige Cookies,
-              die für den Betrieb der Website erforderlich sind. Wir verwenden keine
-              Tracking-Cookies oder Cookies für Werbezwecke.
+              Beim ersten Besuch unserer Website fragen wir Sie über einen Cookie-Banner
+              nach Ihrer Einwilligung. Sie können Ihre Auswahl jederzeit über den Link
+              <em> &bdquo;Cookie-Einstellungen&ldquo;</em> im Footer ändern oder widerrufen.
+              Ihre Auswahl wird lokal in Ihrem Browser gespeichert (LocalStorage,
+              Schl&uuml;ssel <code>op_cookie_consent_v1</code>).
+            </p>
+            <p className="mt-4">Wir unterscheiden drei Kategorien:</p>
+            <ul className="list-disc list-inside space-y-2 mt-3">
+              <li>
+                <strong>Notwendig</strong> &mdash; f&uuml;r den Betrieb der Website
+                erforderlich (z.&nbsp;B. zum Speichern Ihrer Cookie-Einstellungen).
+                Diese Kategorie ist immer aktiv und kann nicht deaktiviert werden.
+                Rechtsgrundlage: Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO,
+                &sect;&nbsp;25 Abs.&nbsp;2 Nr.&nbsp;2 TTDSG.
+              </li>
+              <li>
+                <strong>Statistik</strong> &mdash; helfen uns anonymisiert zu
+                verstehen, wie Besucher unsere Website nutzen. Werden nur mit Ihrer
+                Einwilligung gesetzt. Aktuell setzen wir keine Statistik-Cookies ein.
+              </li>
+              <li>
+                <strong>Marketing</strong> &mdash; w&uuml;rden zur Anzeige relevanter
+                Inhalte und Werbung verwendet. Werden nur mit Ihrer Einwilligung
+                gesetzt. Aktuell setzen wir keine Marketing-Cookies ein.
+              </li>
+            </ul>
+            <p className="mt-4">
+              Rechtsgrundlage f&uuml;r einwilligungspflichtige Cookies sind
+              Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO und &sect;&nbsp;25 Abs.&nbsp;1
+              TTDSG. Sie k&ouml;nnen Ihre Einwilligung jederzeit mit Wirkung f&uuml;r
+              die Zukunft widerrufen.
             </p>
           </section>
 

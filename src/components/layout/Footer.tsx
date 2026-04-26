@@ -3,9 +3,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Heart, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { FOOTER_LINKS, SITE_NAME } from '@/lib/constants';
 import { Button } from '@/components/ui/Button';
+import { openCookieSettings } from '@/lib/cookie-consent';
 
 export function Footer() {
   const [email, setEmail] = useState('');
@@ -111,6 +112,15 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <button
+                  type="button"
+                  onClick={openCookieSettings}
+                  className="text-sm text-[var(--foreground)]/60 hover:text-primary transition-colors text-left cursor-pointer"
+                >
+                  Cookie-Einstellungen
+                </button>
+              </li>
             </ul>
           </div>
         </div>

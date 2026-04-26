@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ClientProviders } from "@/components/layout/ClientProviders";
+import { CookieConsent } from "@/components/cookie/CookieConsent";
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
 import { DynamicBackground } from "@/components/effects/DynamicBackground";
 
@@ -74,6 +75,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <CookieConsent />
           </ClientProviders>
         </div>
       </body>
