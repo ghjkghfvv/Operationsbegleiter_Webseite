@@ -43,7 +43,7 @@ const phases = [
     emoji: '🎉',
     accent: 'bg-primary/10 text-primary',
     dot: 'bg-primary',
-    items: ['Fortgeschrittene Reha-Programme', 'Langzeit-Vitalwerte & Fortschrittsübersicht', 'Arztbericht als PDF exportieren', 'Rückkehr in den Alltag begleitet'],
+    items: ['Fortgeschrittene Reha-Programme', 'Langzeit-Vitalwerte & Fortschrittsübersicht', 'Eigene Daten als PDF exportieren', 'Rückkehr in den Alltag begleitet'],
   },
 ];
 

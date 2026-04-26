@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   List, Thermometer, Camera, Activity, Pill, Utensils,
   Calendar, FileText, Image, QrCode, Users, AlertTriangle,
-  Bot, Stethoscope, ClipboardList, Moon, Trophy, Mic,
+  Bot, ClipboardList, Moon, Mic,
   BookOpen, Dumbbell, ClipboardCheck, Phone, Download,
-  TrendingUp, User, BarChart2, UserPlus, Settings,
-  LayoutGrid, Eye, MessageSquare, Heart, CalendarDays,
-  GraduationCap, Smartphone, Lock, Building2, Shield,
+  TrendingUp, User, BarChart2, UserPlus,
+  Eye, MessageSquare, Heart,
+  GraduationCap, Smartphone, Lock,
   Check, X, ChevronDown, Sparkles,
   type LucideIcon,
 } from 'lucide-react';
@@ -109,31 +109,20 @@ const patientProCategories: Category[] = [
   },
 ];
 
-// ── ÄRZTE & ORGANISATIONEN ──
+// ── ÄRZTE — Behandlungspläne ──
 const arztCategories: Category[] = [
   {
-    title: 'Patientenverwaltung',
+    title: 'Behandlungspläne erstellen',
     features: [
-      { icon: Users,         title: 'Patientenliste',            desc: 'Alle verknüpften Patienten mit Phasen-Übersicht und Warnstatus.',                                color: 'bg-blue-500' },
-      { icon: Eye,           title: 'Patientendetails',          desc: 'Schmerz, Wunden, Termine, Dokumente — alles je Patient einsehen.',                               color: 'bg-[#007AFF]' },
-      { icon: UserPlus,      title: 'Patienten einladen',        desc: 'Einladungscode und QR-Code generieren — einfach und schnell.',                                   color: 'bg-teal-500' },
-      { icon: Users,         title: 'Unbegrenzte Patienten',     desc: 'So viele Patienten verwalten wie Sie möchten — ohne Limit.',                                     color: 'bg-orange-500' },
+      { icon: ClipboardList, title: 'Behandlungsplan-Vorlagen',  desc: 'Wiederverwendbare Vorlagen pro Eingriffsart anlegen — mit Aufgaben, Meilensteinen und Empfehlungen.', detail: 'Eine Vorlage pro Eingriffsart, beliebig oft anwendbar. Aufgaben mit Phasen (vor OP, akut, Nachsorge, Reha) und Zeitpunkten strukturieren.', color: 'bg-violet-500' },
+      { icon: Sparkles,      title: 'Pro Patient personalisieren', desc: 'Vorlagen individuell an Diagnose, Eingriff und Verlauf des Patienten anpassen.',                   detail: 'Aufgaben hinzufügen, entfernen oder umformulieren — der Patient sieht nur seinen personalisierten Plan.', color: 'bg-blue-500' },
     ],
   },
   {
-    title: 'Planung & Behandlung',
+    title: 'Patient & Zuweisung',
     features: [
-      { icon: CalendarDays,  title: 'Kalender',                  desc: 'Termine erstellen, bearbeiten und löschen — Monats- und Wochenansicht.',                          color: 'bg-sky-500' },
-      { icon: ClipboardList, title: 'Care-Plan-Vorlagen',        desc: 'Templates mit Tasks erstellen und auf Patienten anwenden.',                                       color: 'bg-violet-500' },
-      { icon: BarChart2,     title: 'Arztbericht',               desc: 'Genese-Bericht erstellen, als PDF exportieren und teilen.',                                       color: 'bg-emerald-500' },
-    ],
-  },
-  {
-    title: 'Organisation & Team',
-    features: [
-      { icon: LayoutGrid,    title: 'Dashboard',                 desc: 'Tagesübersicht mit Warnungen, Terminen und Schnellaktionen.',                                    color: 'bg-blue-600' },
-      { icon: Settings,      title: 'Personal-Management',       desc: 'Mitarbeiter-Accounts mit granularer Rechteverwaltung anlegen.',                                  color: 'bg-slate-500' },
-      { icon: Building2,     title: 'Organisation',              desc: 'Mehrere Ärzte unter einem Dach verwalten — ideal für Kliniken.',                                  color: 'bg-blue-700' },
+      { icon: UserPlus,      title: 'Patienten einladen',        desc: 'Einladungscode und QR-Code generieren — der Plan landet direkt beim Patienten.',                  color: 'bg-teal-500' },
+      { icon: Users,         title: 'Patientenliste',            desc: 'Übersicht, welchem Patienten welcher Behandlungsplan zugewiesen ist.',                            color: 'bg-orange-500' },
       { icon: User,          title: 'Profil verwalten',          desc: 'Name, Fachrichtung und Praxisdaten pflegen.',                                                     color: 'bg-indigo-500' },
     ],
   },
@@ -158,7 +147,7 @@ type FilterTab = 'patienten-free' | 'patienten-pro' | 'aerzte' | 'familien';
 const tabConfig: { value: FilterTab; label: string; sub?: string; color: string }[] = [
   { value: 'patienten-free', label: 'Patienten', sub: 'Kostenlos', color: 'bg-primary' },
   { value: 'patienten-pro',  label: 'Patienten', sub: 'Pro',       color: 'bg-gradient-to-r from-violet-500 to-primary' },
-  { value: 'aerzte',         label: 'Ärzte & Orgs', sub: 'Gratis', color: 'bg-accent' },
+  { value: 'aerzte',         label: 'Ärzte', sub: 'Gratis', color: 'bg-accent' },
   { value: 'familien',       label: 'Familie',                      color: 'bg-rose-500' },
 ];
 

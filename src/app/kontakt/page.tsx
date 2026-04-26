@@ -31,7 +31,7 @@ export default function KontaktPage() {
     {
       icon: <Building2 className="w-6 h-6" />,
       title: 'Partnerschaften',
-      desc: 'Kooperationen mit Kliniken & Ärzten',
+      desc: 'Kooperationen mit Ärzten & Praxen',
       contact: 'Operationsbegleiter@gmail.com',
     },
     {

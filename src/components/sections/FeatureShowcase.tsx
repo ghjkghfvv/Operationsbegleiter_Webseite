@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   List, Thermometer, Camera, Activity, Pill, Utensils,
   Calendar, FileText, Image, QrCode, Users, AlertTriangle,
-  Bot, Stethoscope, ClipboardList, Moon, Trophy, Mic,
+  Bot, Stethoscope, ClipboardList, Moon, Mic,
   BookOpen, Dumbbell, ClipboardCheck, Phone, Download,
-  TrendingUp, User, BarChart2, UserPlus, Settings,
-  LayoutGrid, Eye, MessageSquare, Heart, CalendarDays,
-  GraduationCap, Smartphone, Lock, Building2,
+  TrendingUp, User, BarChart2, UserPlus,
+  Eye, MessageSquare, Heart,
+  GraduationCap, Smartphone, Lock,
   LucideIcon,
 } from 'lucide-react';
 import { TextReveal } from '@/components/effects/TextReveal';
@@ -60,19 +60,13 @@ const patientProFeatures: Feature[] = [
   { icon: BarChart2,     title: 'Analytics Dashboard',       desc: 'Detaillierte Auswertungen und Analysen',                          color: 'bg-violet-600' },
 ];
 
-// ── ÄRZTE (alle Funktionen kostenlos) ──
+// ── ÄRZTE (Behandlungspläne — komplett kostenlos) ──
 const arztFeatures: Feature[] = [
-  { icon: Users,         title: 'Patientenliste',            desc: 'Alle verknüpften Patienten mit Phasen-Übersicht',                 color: 'bg-blue-500' },
-  { icon: Eye,           title: 'Patientendetails',          desc: 'Schmerz, Wunden, Termine, Dokumente je Patient einsehen',          color: 'bg-[#007AFF]' },
-  { icon: CalendarDays,  title: 'Kalender',                  desc: 'Termine erstellen, bearbeiten und löschen',                        color: 'bg-sky-500' },
+  { icon: ClipboardList, title: 'Behandlungsplan-Vorlagen',  desc: 'Wiederverwendbare Vorlagen pro Eingriffsart anlegen',              color: 'bg-violet-500' },
+  { icon: Stethoscope,   title: 'Pro Patient personalisieren', desc: 'Vorlagen individuell an Diagnose und Verlauf anpassen',          color: 'bg-blue-500' },
   { icon: UserPlus,      title: 'Patienten einladen',        desc: 'Einladungscode und QR-Code generieren',                            color: 'bg-teal-500' },
+  { icon: Users,         title: 'Patientenliste',            desc: 'Übersicht über alle zugewiesenen Behandlungspläne',                color: 'bg-orange-500' },
   { icon: User,          title: 'Profil verwalten',          desc: 'Name, Fachrichtung und Praxisdaten pflegen',                       color: 'bg-indigo-500' },
-  { icon: Users,         title: 'Unbegrenzte Patienten',     desc: 'Unbegrenzte Patientenanzahl verwalten',                             color: 'bg-orange-500' },
-  { icon: ClipboardList, title: 'Care-Plan-Vorlagen',        desc: 'Templates mit Tasks erstellen und auf Patienten anwenden',         color: 'bg-violet-500' },
-  { icon: BarChart2,     title: 'Arztbericht',               desc: 'Genese-Bericht exportieren und teilen',                            color: 'bg-emerald-500' },
-  { icon: Settings,      title: 'Personal-Management',       desc: 'Mitarbeiter-Accounts mit granularer Rechteverwaltung',            color: 'bg-slate-500' },
-  { icon: Building2,     title: 'Organisation',              desc: 'Mehrere Ärzte unter einem Dach verwalten',                         color: 'bg-blue-700' },
-  { icon: LayoutGrid,    title: 'Dashboard',                 desc: 'Tagesübersicht mit Warnungen, Terminen und Schnellaktionen',       color: 'bg-blue-600' },
 ];
 
 // ── FAMILIE ──
@@ -87,7 +81,7 @@ const familieFeatures: Feature[] = [
 const tabs: { key: Tab; label: string; sub?: string; count: number; pricing?: string }[] = [
   { key: 'patient-free', label: 'Patienten',   sub: 'Kostenlos', count: 16 },
   { key: 'patient-pro',  label: 'Patienten',   sub: 'Pro',       count: 13, pricing: 'ab 8,99 €/Monat' },
-  { key: 'arzt-free',    label: 'Ärzte & Orgs', sub: 'Alles gratis', count: 11 },
+  { key: 'arzt-free',    label: 'Ärzte', sub: 'Alles gratis', count: 5 },
   { key: 'familie',      label: 'Familie',     count: 5 },
 ];
 

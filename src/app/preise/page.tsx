@@ -28,7 +28,7 @@ export default function PreisePage() {
           </h1>
           <p className="text-lg text-[var(--foreground)]/60 max-w-2xl mx-auto mb-8">
             Starten Sie kostenlos und upgraden Sie, wenn Sie bereit sind. Keine versteckten Kosten.
-            <span className="block mt-2 text-primary font-medium">Für Ärzte &amp; Organisationen ist der Operationsbegleiter komplett kostenlos.</span>
+            <span className="block mt-2 text-primary font-medium">Für Ärzte ist der Operationsbegleiter komplett kostenlos.</span>
           </p>
 
           {/* Billing Toggle */}

@@ -1,11 +1,11 @@
 export const SITE_NAME = 'Operationsbegleiter';
 export const SITE_URL = 'https://operationsbegleiter.de';
-export const SITE_DESCRIPTION = 'Die umfassendste digitale Begleit-App für Patienten rund um chirurgische Eingriffe. Vernetzt Patienten, Ärzte und Angehörige.';
+export const SITE_DESCRIPTION = 'Die digitale Begleit-App für Patienten rund um chirurgische Eingriffe. Ärzte erstellen personalisierte Behandlungspläne, Patienten dokumentieren ihre Genesung.';
 
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/features', label: 'Features' },
-  { href: '/aerzte', label: 'Für Ärzte & Kliniken' },
+  { href: '/aerzte', label: 'Für Ärzte' },
   { href: '/preise', label: 'Preise' },
   { href: '/kontakt', label: 'Kontakt' },
 ] as const;
@@ -14,7 +14,7 @@ export const FOOTER_LINKS = {
   produkt: [
     { href: '/features', label: 'Features' },
     { href: '/preise', label: 'Preise' },
-    { href: '/aerzte', label: 'Für Ärzte & Kliniken' },
+    { href: '/aerzte', label: 'Für Ärzte' },
   ],
   unternehmen: [
     { href: '/kontakt', label: 'Kontakt' },
@@ -68,7 +68,7 @@ export const TESTIMONIALS = [
     age: 0,
     operation: 'Orthopäde',
     rating: 5,
-    text: 'Als Arzt schätze ich die Übersicht über meine Patienten enorm. Ich kann den Fortschritt verfolgen und bei kritischen Werten sofort reagieren.',
+    text: 'Ich erstelle einmal eine Behandlungsplan-Vorlage pro Eingriffsart und passe sie pro Patient in wenigen Minuten an. Meine Patienten bekommen so eine klare, individuelle Roadmap für ihre Genesung.',
   },
   {
     name: 'Petra H.',
@@ -156,49 +156,24 @@ export const FEATURES_PATIENT = [
 
 export const FEATURES_DOCTOR = [
   {
-    icon: 'Users',
-    title: 'Patientenliste',
-    description: 'Alle verknüpften Patienten mit Phasen-Übersicht und Warnstatus.',
-  },
-  {
-    icon: 'Eye',
-    title: 'Patientendetails',
-    description: 'Schmerz, Wunden, Termine, Dokumente je Patient einsehen.',
-  },
-  {
-    icon: 'Calendar',
-    title: 'Kalender',
-    description: 'Termine erstellen, bearbeiten und löschen — Monats- und Wochenansicht.',
-  },
-  {
     icon: 'ClipboardList',
-    title: 'Care-Plan-Vorlagen',
-    description: 'Templates mit Tasks erstellen und auf Patienten anwenden.',
+    title: 'Behandlungsplan-Vorlagen',
+    description: 'Erstellen Sie strukturierte Vorlagen mit Aufgaben, Meilensteinen und Empfehlungen für jeden Eingriff.',
+  },
+  {
+    icon: 'Stethoscope',
+    title: 'Personalisieren pro Patient',
+    description: 'Passen Sie Vorlagen individuell an — abgestimmt auf Diagnose, Eingriff und Genesungsverlauf.',
   },
   {
     icon: 'QrCode',
     title: 'Patienten einladen',
-    description: 'Einladungscode und QR-Code generieren.',
+    description: 'Generieren Sie einen Einladungscode oder QR-Code und weisen Sie den Behandlungsplan direkt zu.',
   },
   {
-    icon: 'BarChart2',
-    title: 'Arztbericht',
-    description: 'Genese-Bericht erstellen, exportieren und teilen.',
-  },
-  {
-    icon: 'Settings',
-    title: 'Personal-Management',
-    description: 'Mitarbeiter-Accounts mit granularer Rechteverwaltung.',
-  },
-  {
-    icon: 'Building2',
-    title: 'Organisation',
-    description: 'Mehrere Ärzte unter einem Dach verwalten.',
-  },
-  {
-    icon: 'LayoutGrid',
-    title: 'Dashboard',
-    description: 'Tagesübersicht mit Warnungen, Terminen und Schnellaktionen.',
+    icon: 'Users',
+    title: 'Patientenliste',
+    description: 'Behalten Sie den Überblick, welchem Patienten welcher Behandlungsplan zugewiesen ist.',
   },
 ] as const;
 
@@ -269,19 +244,13 @@ export const PRICING_PLANS_ARZT = [
   {
     name: 'Kostenlos',
     price: { monthly: 0, yearly: 0 },
-    description: 'Alle Funktionen — dauerhaft gratis',
+    description: 'Behandlungspläne erstellen — dauerhaft gratis',
     features: [
+      'Unbegrenzte Behandlungsplan-Vorlagen',
+      'Vorlagen pro Patient personalisieren',
       'Unbegrenzte Patienten',
-      'Unbegrenzte Angestellte',
-      'Patientenliste mit Phasen-Übersicht',
-      'Patientendetails ansehen (Schmerz, Wunden, Termine, Dokumente)',
-      'Kalender (Termine erstellen, bearbeiten, löschen)',
       'Patienten einladen (Code + QR)',
-      'Care-Plan-Vorlagen erstellen & anwenden',
-      'Arztbericht exportieren / teilen',
-      'Personal-Management mit Rechteverwaltung',
-      'Organisation (mehrere Ärzte unter einem Dach)',
-      'Dashboard mit Warnungs- und Termin-Übersicht',
+      'Patientenliste mit zugewiesenen Plänen',
       'Profil verwalten',
     ],
     notIncluded: [],
@@ -311,7 +280,7 @@ export const BELLA_DEMO_MESSAGES = [
 export const FAQ_ITEMS = [
   {
     question: 'Ist der Operationsbegleiter kostenlos?',
-    answer: 'Ja, die Basis-Version für Patienten ist dauerhaft kostenlos und umfasst Timeline, Schmerztagebuch, Wunddokumentation, Vitalzeichen, Medikamente, Ernährung, Termine, OP-Informationen und mehr. Für erweiterte Features wie den KI-Assistenten Bella, Reha-Übungen, Red Flags und Familien-Zugang gibt es Pro ab 8,99 €/Monat oder 75,00 €/Jahr. Für Ärzte und Organisationen ist der Operationsbegleiter komplett kostenlos — alle Funktionen inklusive.',
+    answer: 'Ja, die Basis-Version für Patienten ist dauerhaft kostenlos und umfasst Timeline, Schmerztagebuch, Wunddokumentation, Vitalzeichen, Medikamente, Ernährung, Termine, OP-Informationen und mehr. Für erweiterte Features wie den KI-Assistenten Bella, Reha-Übungen, Red Flags und Familien-Zugang gibt es Pro ab 8,99 €/Monat oder 75,00 €/Jahr. Für Ärzte ist der Operationsbegleiter komplett kostenlos.',
   },
   {
     question: 'Wie sicher sind meine Daten?',
@@ -339,11 +308,11 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Kann ich das Pro-Abo kündigen?',
-    answer: 'Ja, jederzeit über den App Store oder Google Play Store. Es gibt keine Mindestlaufzeit. Patienten-Pro: 8,99 €/Monat oder 75,00 €/Jahr. Für Ärzte und Organisationen sind alle Funktionen kostenlos.',
+    answer: 'Ja, jederzeit über den App Store oder Google Play Store. Es gibt keine Mindestlaufzeit. Patienten-Pro: 8,99 €/Monat oder 75,00 €/Jahr. Für Ärzte sind alle Funktionen kostenlos.',
   },
   {
-    question: 'Gibt es auch einen Plan für Ärzte?',
-    answer: 'Ja! Ärzte und Organisationen können den Operationsbegleiter komplett kostenlos nutzen — mit allen Funktionen: unbegrenzte Patienten, unbegrenzte Angestellte, Care-Plan-Vorlagen, Arztbericht-Export, Personal-Management, Organisation und Dashboard. Es gibt keine Einschränkungen.',
+    question: 'Was können Ärzte mit dem Operationsbegleiter tun?',
+    answer: 'Ärzte erstellen personalisierte Behandlungspläne für ihre Patienten. Dafür legen sie wiederverwendbare Vorlagen mit Aufgaben und Meilensteinen pro Eingriffsart an, passen diese individuell pro Patient an und weisen den Plan per QR-Code oder Einladungscode zu. Die App ist für Ärzte komplett kostenlos und unbegrenzt nutzbar.',
   },
 ] as const;
 

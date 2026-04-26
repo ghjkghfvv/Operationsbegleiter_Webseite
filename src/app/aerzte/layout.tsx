@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Für Ärzte, Praxen & Kliniken',
-  description: 'Der Operationsbegleiter für Ärzte und Kliniken: Dashboard, Patientenmonitoring, Personal-Management und skalierbare Enterprise-Lösungen.',
+  title: 'Für Ärzte',
+  description: 'Der Operationsbegleiter für Ärzte: Erstellen Sie personalisierte Behandlungspläne für Ihre Patienten. Vorlagen anlegen, individuell anpassen, per QR-Code zuweisen — kostenlos.',
 };
 
 export default function AerzteLayout({ children }: { children: React.ReactNode }) {
